@@ -1,0 +1,14 @@
+# Object files
+*.o
+
+# Executables
+*.out
+
+#ar
+libfts.a
+
+# macos
+.DS_Store
+
+#vim
+*.swp
