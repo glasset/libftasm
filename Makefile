@@ -6,20 +6,21 @@
 #*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/01 14:25:37 by glasset           #+#    #+#             *#
-#*   Updated: 2016/11/13 18:35:40 by glasset          ###   ########.fr       *#
+#*   Updated: 2016/11/13 19:17:42 by glasset          ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
 NAME = libfts.a
 
 
-SRC = ft_bzero.s ft_strcat.s ft_isupper.s ft_islower.s ft_isalpha.s
+SRC = ft_bzero.s ft_strcat.s ft_isupper.s ft_islower.s ft_isalpha.s ft_isdigit.s \
+	  ft_isalnum.s ft_isascii.s
 
 OBJ = $(SRC:%.s=%.o)
 
 
 TEST = test/test
-FILE = is_alpha.c main.c
+FILE = issomething.c main.c
 TEST_SRC = $(addprefix test/, $(FILE))
 TEST_OBJ = $(TEST_SRC:%.c=%.o)
 

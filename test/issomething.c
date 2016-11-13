@@ -6,27 +6,38 @@
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/13 18:21:28 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/13 18:39:08 by glasset          ###   ########.fr       */
+/*   Updated: 2016/11/13 19:18:34 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <ctype.h>
 #include "test.h"
 
-void		t_isalpha(void)
+static void	print_res(int a, int b)
+{
+	if (a != b)
+		printf("x");
+	else
+		printf(".");
+}
+
+void		issomething(void)
 {
 	int	i;
-	int	x;
 
 	i = 0;
-	x = 0;
 	while (i < 256)
 	{
-		if (ft_isalpha(i) != isalpha(i))
-			printf("isalpha fail: %c\n", i);
-		if (ft_islower(i) != islower(i))
-			printf("islower fail: %c\n", i);
-		if (ft_isupper(i) != isupper(i))
-			printf("isupper fail: %c\n", i);
+		printf("(%d: ", i);
+		print_res(ft_isalpha(i), isalpha(i));
+		print_res(ft_islower(i), islower(i));
+		print_res(ft_isupper(i), isupper(i));
+		print_res(ft_isdigit(i), isdigit(i));
+		print_res(ft_isalnum(i), isalnum(i));
+		print_res(ft_isascii(i), isascii(i));
+		printf(")");
+		if (i % 10 == 0)
+			printf("\n");
 		i++;
 	}
+	printf("\n");
 }

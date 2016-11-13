@@ -12,3 +12,5 @@ libfts.a
 
 #vim
 *.swp
+test/test
+

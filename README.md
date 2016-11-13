@@ -1,4 +1,4 @@
-# libftAsm (école 42 project)
+# libftAsm (42.fr project)
 
 + bzero
 + strcat

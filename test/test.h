@@ -6,7 +6,7 @@
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/13 18:28:07 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/13 18:32:57 by glasset          ###   ########.fr       */
+/*   Updated: 2016/11/13 18:53:54 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 #include "libfts.h"
 #include <stdio.h>
 
-void t_isalpha(void);
+void issomething(void);
 
 #endif
