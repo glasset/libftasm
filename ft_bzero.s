@@ -1,10 +1,14 @@
-section .text
-	global start
-	global _main
+global _ft_bzero
 
-start:
-	call _main
-	ret
+_ft_bzero:
 
-_main:
+loop:
+	cmp rsi, 0
+	je  end
+	mov BYTE [rdi], 0
+	inc rdi
+	dec rsi
+	jmp loop
+
+end:
 	ret
