@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/13 18:28:07 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/15 19:20:25 by glasset          ###   ########.fr       */
+/*   Created: 2016/11/15 19:21:33 by glasset           #+#    #+#             */
+/*   Updated: 2016/11/15 19:30:55 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "test.h"
+#include <string.h>
 
-#ifndef TEST_H
-# define TEST_H
-#include "libfts.h"
-#include <stdio.h>
+void	t_strlen(void)
+{
+	printf("test strlen:\n");
 
-void	issomething(void);
-void	t_puts(void);
-void	t_strlen(void);
+	print_res(ft_strlen(""), strlen(""));
+	print_res(ft_strlen("test42"), strlen("test42"));
+	print_res(ft_strlen("toto"), strlen("toto"));
 
-
-void	print_res(int a, int b);
-#endif
+	printf("\n");
+}
