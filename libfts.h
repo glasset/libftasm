@@ -6,7 +6,7 @@
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 17:07:34 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/13 18:51:40 by glasset          ###   ########.fr       */
+/*   Updated: 2016/11/26 23:46:49 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ int			ft_puts(const char *s);
 size_t		ft_strlen(const char *);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void* dst, const void* src, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
 char		*ft_strdup(const char *s1);
 void		ft_cat(int fd);
+
 
 #endif

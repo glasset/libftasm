@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/13 18:28:07 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/26 23:55:58 by glasset          ###   ########.fr       */
+/*   Created: 2016/11/26 23:56:02 by glasset           #+#    #+#             */
+/*   Updated: 2016/11/27 00:40:48 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "test.h"
+#include <string.h>
 
-#ifndef TEST_H
-# define TEST_H
-#include "libfts.h"
-#include <stdio.h>
+static void		test(char *str, char c)
+{
+	int		i = strlen(str);
+	char	*res = ft_memchr(str, c, i);
+	char	*res2 = memchr(str, c, i);
 
-void	issomething(void);
-void	t_puts(void);
-void	t_strlen(void);
-void	t_memset(void);
-void	t_memcpy(void);
-void	t_memchr(void);
-void	t_strdup(void);
-void	t_cat(void);
+	check(res, res2);
+}
 
-void	check(char *res, char *res2);
-void	print_res(int a, int b);
-#endif
+void			t_memchr(void)
+{
+	printf("test memchr:\n");
+
+	test("shortAmiddleString", 'A');
+	test("SfirstChar", 'S');
+	test("lastCharD", 'D');
+	printf("\n");
+}
