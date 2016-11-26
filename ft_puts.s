@@ -11,11 +11,15 @@ section .text
 	global _ft_puts
 
 _ft_puts:
+	push rbp
+	mov rbp, rsp
 	cmp BYTE [rdi], 0x0
 	je print_newline
 
 loop:
+	push rdi ; save rdi before call strlen
 	call _ft_strlen
+	pop rdi
 	mov rbx, rax
 
 print:
@@ -33,4 +37,6 @@ print_newline:
 	syscall
 	inc rbx ; add nl to ret
 	mov rax, rbx
+	mov rsp, rbp
+	pop rbp
 	ret

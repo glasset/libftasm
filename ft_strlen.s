@@ -1,16 +1,16 @@
 global _ft_strlen
 
 _ft_strlen:
-	xor rbx, rbx ; init int
-	mov rcx, rdi
-
-loop:
-	cmp BYTE [rcx], 0x0
+	xor rcx, rcx ;
+	not rcx ; reverse all bits
+	xor al, al ; search for \0
+	cmp rdi, 0x0 ;string null go ret
 	je end
-	inc rbx ; inc int
-	inc rcx ;inc *str
-	jmp loop
+	cld
+	repne scasb ; search for \0 (al) in string (rdi)
+	not rcx
+	dec rcx ; -1 for \0
 
 end:
-	mov rax, rbx
+	mov rax, rcx
 	ret
