@@ -6,7 +6,7 @@
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/13 18:28:07 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/26 18:47:50 by glasset          ###   ########.fr       */
+/*   Updated: 2016/11/26 20:18:34 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	t_strlen(void);
 void	t_memset(void);
 void	t_memcpy(void);
 void	t_strdup(void);
+void	t_cat(void);
 
 void	check(char *res, char *res2);
 void	print_res(int a, int b);

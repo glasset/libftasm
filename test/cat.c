@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   cat.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/12 16:58:49 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/26 20:12:46 by glasset          ###   ########.fr       */
+/*   Created: 2016/11/26 20:13:21 by glasset           #+#    #+#             */
+/*   Updated: 2016/11/26 21:25:12 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "test.h"
-#include <string.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include <fcntl.h>
 
-void	print_res(int a, int b)
+void	t_cat(void)
 {
-	if (a != b)
-		printf("x");
-	else
-		printf(".");
-}
+	char	file[] = "test/cat.c";
+	int		fd;
 
-void	check(char *res, char *res2)
-{
-	if (!strcmp(res, res2))
-		printf(".");
-	else
-		printf("x;%s|%s", res, res2);
-}
+	printf("test cat:\n");
+	fd = open(file, O_RDONLY);
+	printf("fd%d\n", fd);
+	ft_cat(fd);
+	close(fd);
 
-int main(void)
-{
-	issomething();
-	t_puts();
-	t_strlen();
-	t_memset();
-	t_memcpy();
-	t_strdup();
-	t_cat();
+	fd = open("cat.c", O_RDONLY);
+	printf("fd%d\n", fd);
+	ft_cat(fd);
 }
