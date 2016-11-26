@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   strdup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/13 18:28:07 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/26 18:47:50 by glasset          ###   ########.fr       */
+/*   Created: 2016/11/26 18:44:09 by glasset           #+#    #+#             */
+/*   Updated: 2016/11/26 18:52:57 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "test.h"
+#include <string.h>
 
-#ifndef TEST_H
-# define TEST_H
-#include "libfts.h"
-#include <stdio.h>
+void	t_strdup(void)
+{
+	char	s1[] = "copymepls";
+	char	s2[] = "";
+	char	*res = ft_strdup(s1);
+	char	*res2 = strdup(s1);
 
-void	issomething(void);
-void	t_puts(void);
-void	t_strlen(void);
-void	t_memset(void);
-void	t_memcpy(void);
-void	t_strdup(void);
+	printf("test strdup:\n");
+	check(res, res2);
+	res = ft_strdup(s2);
+	res2 = strdup(s2);
+	check(res, res2);
+	printf("\n");
+}
 
-void	check(char *res, char *res2);
-void	print_res(int a, int b);
-#endif

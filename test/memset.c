@@ -6,20 +6,11 @@
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 17:42:40 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/26 18:30:27 by glasset          ###   ########.fr       */
+/*   Updated: 2016/11/26 18:52:55 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "test.h"
 #include <string.h>
-
-void	check(char *res, char *res2)
-{
-	if (!strcmp(res, res2))
-		printf(".");
-	else
-		printf("x;%s|%s", res, res2);
-	printf("\n");
-}
 
 void	t_memset(void)
 {
@@ -29,6 +20,7 @@ void	t_memset(void)
 
 	printf("test memset:\n");
 	check(res, res2);
+	printf("\n");
 }
 
 void	t_memcpy(void)
@@ -40,5 +32,6 @@ void	t_memcpy(void)
 
 	printf("test memcpy:\n");
 	check(res, res2);
+	printf("\n");
 }
 
