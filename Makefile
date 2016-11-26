@@ -6,7 +6,7 @@
 #*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/01 14:25:37 by glasset           #+#    #+#             *#
-#*   Updated: 2016/11/26 17:36:04 by glasset          ###   ########.fr       *#
+#*   Updated: 2016/11/26 18:42:32 by glasset          ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -15,7 +15,7 @@ NAME = libfts.a
 
 SRC = ft_bzero.s ft_strcat.s ft_isupper.s ft_islower.s ft_isalpha.s ft_isdigit.s \
 	  ft_isalnum.s ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s \
-	  ft_puts.s ft_strlen.s ft_memset.s
+	  ft_puts.s ft_strlen.s ft_memset.s ft_memcpy.s
 
 OBJ = $(SRC:%.s=%.o)
 
