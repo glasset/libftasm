@@ -26,7 +26,7 @@ FILE = main.c issomething.c puts.c strlen.c memset.c strdup.c cat.c memchr.c str
 TEST_SRC = $(addprefix test/, $(FILE))
 TEST_OBJ = $(TEST_SRC:%.c=%.o)
 
-ASSEMBLER = ~/Downloads/nasm-2.10/nasm
+ASSEMBLER = nasm
 FORMAT = macho64
 
 .PHONY: all clean fclean re
