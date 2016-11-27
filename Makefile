@@ -6,7 +6,7 @@
 #*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/01 14:25:37 by glasset           #+#    #+#             *#
-#*   Updated: 2016/11/27 02:01:44 by glasset          ###   ########.fr       *#
+#*   Updated: 2016/11/27 14:43:42 by glasset          ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -51,8 +51,9 @@ clean:
 $(TEST) : $(TEST_OBJ)
 	@echo "Compiling gcc: $<"
 	gcc $(TEST_OBJ) -L. -lfts -o $(TEST)
-	./test/test
 
+run_test:
+	@./test/test
 
 fclean: clean
 	@rm -f $(NAME)

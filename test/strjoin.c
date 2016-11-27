@@ -6,11 +6,12 @@
 /*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/27 01:55:42 by glasset           #+#    #+#             */
-/*   Updated: 2016/11/27 13:45:39 by glasset          ###   ########.fr       */
+/*   Updated: 2016/11/27 14:43:14 by glasset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "test.h"
 #include <string.h>
+#include <stdlib.h>
 
 void	t_strjoin(void)
 {
