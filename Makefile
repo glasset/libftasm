@@ -6,7 +6,7 @@
 #*   By: glasset <glasset@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/01 14:25:37 by glasset           #+#    #+#             *#
-#*   Updated: 2016/11/26 23:58:16 by glasset          ###   ########.fr       *#
+#*   Updated: 2016/11/27 02:01:44 by glasset          ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -14,14 +14,15 @@ NAME = libfts.a
 
 
 SRC = ft_bzero.s ft_strcat.s ft_isupper.s ft_islower.s ft_isalpha.s ft_isdigit.s \
-	  ft_isalnum.s ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s ft_cat.s\
-	  ft_puts.s ft_strlen.s ft_memset.s ft_memcpy.s ft_strdup.s ft_memchr.s
+	  ft_isalnum.s ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s ft_cat.s \
+	  ft_puts.s ft_strlen.s ft_memset.s ft_memcpy.s ft_strdup.s ft_memchr.s \
+	  ft_strjoin.s
 
 OBJ = $(SRC:%.s=%.o)
 
 
 TEST = test/test
-FILE = main.c issomething.c puts.c strlen.c memset.c strdup.c cat.c memchr.c
+FILE = main.c issomething.c puts.c strlen.c memset.c strdup.c cat.c memchr.c strjoin.c
 TEST_SRC = $(addprefix test/, $(FILE))
 TEST_OBJ = $(TEST_SRC:%.c=%.o)
 

@@ -22,6 +22,10 @@
 
 + ft_cat
 
--- Bonus
+--
+## Bonus
 
-+ ft_memchr
++ islower
++ isupper
++ memchr
++ strjoin
