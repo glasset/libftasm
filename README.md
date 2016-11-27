@@ -21,3 +21,7 @@
 --
 
 + ft_cat
+
+-- Bonus
+
++ ft_memchr
